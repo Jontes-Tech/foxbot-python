@@ -1,11 +1,10 @@
 import discord
 import random
 import time
-def get_bot_token():
-    with open("/usr/share/bot/token.txt", "r") as f:
-         return f.read()
+import os
+
 print("Foxbot is starting up...")
-bot_token = get_bot_token()
+bot_token = os.environ['FOXBOTDISCORDTOKEN']
 print("Your bot token is: ", bot_token)
 print("Starting server in 5 seconds...")
 time.sleep(5)

@@ -7,12 +7,8 @@ Every time somebody sends a message, the bot checks if it matches one of the key
 
 ## How do I selfhost?
 ### Instructions
-To selfhost, simply create a bot from Discord Dev Portal, get a token. Invite the bot to your server and save the token in a textfile called somewhere on a Linux server. Then run the following command: 
-`docker run -v /path/to/foxbot-token.txt:/usr/share/bot/token.txt:ro jonatanholmgren/foxbot:latest`, but change out the `/path/to/foxbot-token.txt` to your actual path to the txt file, like in the example below.
-
-### Example
-The example assumes that you have stored your Discord token to `/home/jonte/token.txt`
-`docker run -v /path/to/foxbot-token.txt:/usr/share/bot/token.txt:ro jonatanholmgren/foxbot:latest`.
+To selfhost, simply create a bot from Discord Dev Portal, get a token. Invite the bot to your server and note down the token. Then run the following command: 
+`docker run -e FOXBOTDISCORDTOKEN='CHANGE-ME-TO-YOUR-BOT-TOKEN' jonatanholmgren/foxbot:latest`, be sure to provide your actual bot token.
 
 ### Legal stuff:
 I do not own the images, and can not verify that none of the images have any copyright. This repo and my docker container found [here](https://hub.docker.com/r/jonatanholmgren/foxbot) have only **fetches** the images from randomfox.ca, thus making this their responsibility. The GPL 3.0 license included in this repo only applies for **my** code, not the images.
